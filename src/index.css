@@ -1,0 +1,300 @@
+html,
+body,
+#root {
+  background: #000;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: cursive;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 25px;
+  border-radius: 25px;
+  width: 90%;
+  max-width: 350px;
+  text-align: center;
+}
+
+button {
+  border-radius: 30px;
+  padding: 12px 22px;
+  border: none;
+  cursor: pointer;
+}
+
+.petal {
+  position: fixed;
+  top: -20px;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+.buttons-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.yes {
+  background: #ff4d6d;
+  color: white;
+  font-size: 18px;
+}
+
+.no {
+  background: #6c757d;
+  color: white;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.no-choice {
+  margin-top: -10px;
+  font-size: 16px;
+  font-weight: 700; /* ✅ bold */
+  color: #fff;
+  background: rgba(0, 0, 0, 0.25);
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+
+.letter-bg {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: linear-gradient(180deg, #3a1c71, #1e1e2f);
+}
+
+.letter-box {
+  max-width: 700px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 40px 30px;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.letter-box h1,
+.letter-box p,
+.letter-box h2 {
+  color: #fff;
+}
+
+.memories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.memories-title {
+  margin-bottom: 12px;
+}
+
+.memories-text {
+  margin-top: 12px;
+}
+
+.loading-text {
+  color: white;
+  padding-top: 160px;
+}
+
+.memories-box {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.memories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.memories-grid img {
+  width: 130px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  background: black;
+}
+
+.fade-single {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slider {
+  position: relative;
+  width: 280px;
+  height: 380px;
+  margin: 20px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  background: black;
+}
+
+.slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+  display: block;
+}
+
+.fade-out {
+  background: #000 !important;
+  animation: fadeToBlack 0.8s ease forwards;
+}
+
+@keyframes fadeToBlack {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  background: #000;
+  animation: fadeInFromBlack 1.2s ease forwards;
+}
+
+@keyframes fadeInFromBlack {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.black-overlay {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+}
+
+.black-overlay.show {
+  opacity: 1;
+}
+
+.main-photo {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.card {
+  max-width: 350px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border-radius: 25px;
+  padding: 30px;
+  text-align: center;
+}
+
+img {
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+.slider.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.memories,
+.memories * {
+  color: #ffffff;
+}
+
+.fade-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  background: black;
+}
+
+.fade-img.show {
+  opacity: 1;
+}
+
+.letter-box {
+  max-width: 700px;
+  padding: 40px 45px;
+  font-size: 1.15rem;
+}
+
+.letter-box h1 {
+  font-size: 2.2rem;
+}
+
+.typed-love {
+  font-size: 1.6rem;
+  margin-top: 25px;
+}
+
+.card h1 {
+  color: #ffffff;
+}
