@@ -35,6 +35,7 @@ export default function App() {
   return (
     <div className="container letter-bg">
       <div className="card">
+        <h2 className="greeting">Hi Nani 👋</h2>
         <img src="/photo.jpg" alt="Us ❤️" className="main-photo" />
 
         {noClicks < 5 ? (
