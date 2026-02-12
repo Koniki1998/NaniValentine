@@ -28,6 +28,7 @@ body {
   border-radius: 25px;
   width: 90%;
   max-width: 350px;
+  transform: translateY(-40px);
   text-align: center;
 }
 
@@ -323,7 +324,16 @@ img {
   }
 }
 
-
 .card h1 {
   color: #ffffff;
+}
+
+.greeting {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  opacity: 0.95;
 }
