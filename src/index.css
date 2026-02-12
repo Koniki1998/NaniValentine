@@ -337,3 +337,15 @@ img {
   letter-spacing: 0.5px;
   opacity: 0.95;
 }
+
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto;
+  }
+
+  .container {
+    min-height: auto;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
